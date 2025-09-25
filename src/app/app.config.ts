@@ -1,4 +1,4 @@
-import { provideHttpClient } from '@angular/common/http'
+import { provideHttpClient, withFetch } from '@angular/common/http'
 import {
   ApplicationConfig,
   provideBrowserGlobalErrorListeners,
@@ -26,13 +26,17 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
 
     /**
+     * Configures the HTTP client with the fetch strategy for handling HTTP requests.
+     */
+    provideHttpClient(withFetch()),
+
+    /**
      * Imports and sets up translation modules for internationalization (i18n).
      * It uses a factory method to load translation files from the specified location.
      */
-    provideHttpClient(),
     provideTranslateService({
       loader: provideTranslateHttpLoader({
-        prefix: '/assets/i18n/',
+        prefix: './assets/i18n/',
         suffix: '.json'
       }),
       fallbackLang: ES_LANG,
