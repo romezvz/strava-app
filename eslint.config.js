@@ -10,6 +10,7 @@ module.exports = tseslint.config(
       ...tseslint.configs.recommended,
       ...tseslint.configs.stylistic,
       ...angular.configs.tsRecommended,
+      'prettier',
     ],
     processor: angular.processInlineTemplates,
     rules: {
@@ -23,7 +24,6 @@ module.exports = tseslint.config(
         },
       ],
       'import/no-unassigned-import': 'off',
-      '@angular-eslint/component-class-suffix': 'error',
       '@angular-eslint/directive-class-suffix': 'error',
       '@angular-eslint/no-empty-lifecycle-method': 'warn',
       '@angular-eslint/directive-selector': [
@@ -105,11 +105,6 @@ module.exports = tseslint.config(
   },
   {
     files: ['**/*.html'],
-    extends: [...angular.configs.templateRecommended, ...angular.configs.templateAccessibility],
-    rules: {},
-  },
-  {
-    files: ['**/*.json'],
     extends: [...angular.configs.templateRecommended, ...angular.configs.templateAccessibility],
     rules: {},
   },
