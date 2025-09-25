@@ -1,6 +1,6 @@
-const eslint = require('@eslint/js');
-const tseslint = require('typescript-eslint');
-const angular = require('angular-eslint');
+const eslint = require('@eslint/js')
+const tseslint = require('typescript-eslint')
+const angular = require('angular-eslint')
 
 module.exports = tseslint.config(
   {
@@ -9,8 +9,7 @@ module.exports = tseslint.config(
       eslint.configs.recommended,
       ...tseslint.configs.recommended,
       ...tseslint.configs.stylistic,
-      ...angular.configs.tsRecommended,
-      'prettier',
+      ...angular.configs.tsRecommended
     ],
     processor: angular.processInlineTemplates,
     rules: {
@@ -20,8 +19,8 @@ module.exports = tseslint.config(
       complexity: [
         'warn',
         {
-          max: 30,
-        },
+          max: 30
+        }
       ],
       'import/no-unassigned-import': 'off',
       '@angular-eslint/directive-class-suffix': 'error',
@@ -31,16 +30,16 @@ module.exports = tseslint.config(
         {
           type: 'attribute',
           prefix: 'app',
-          style: 'camelCase',
-        },
+          style: 'camelCase'
+        }
       ],
       '@angular-eslint/component-selector': [
         'error',
         {
           type: 'element',
           prefix: 'app',
-          style: 'kebab-case',
-        },
+          style: 'kebab-case'
+        }
       ],
       'no-var': 'warn',
       'no-lonely-if': 'warn',
@@ -57,8 +56,8 @@ module.exports = tseslint.config(
       'no-console': [
         'error',
         {
-          allow: ['warn', 'error'],
-        },
+          allow: ['warn', 'error']
+        }
       ],
       'prefer-const': 'warn',
       'require-await': 'error',
@@ -67,8 +66,8 @@ module.exports = tseslint.config(
       'max-len': [
         'off',
         {
-          code: 160,
-        },
+          code: 160
+        }
       ],
       '@typescript-eslint/ban-types': 'off',
       '@typescript-eslint/no-explicit-any': 'warn',
@@ -84,8 +83,8 @@ module.exports = tseslint.config(
       '@typescript-eslint/no-unused-vars': [
         'warn',
         {
-          argsIgnorePattern: '^_',
-        },
+          argsIgnorePattern: '^_'
+        }
       ],
       '@typescript-eslint/member-ordering': [
         'error',
@@ -97,15 +96,15 @@ module.exports = tseslint.config(
             'public-constructor',
             'public-instance-method',
             'protected-instance-method',
-            'private-instance-method',
-          ],
-        },
-      ],
-    },
+            'private-instance-method'
+          ]
+        }
+      ]
+    }
   },
   {
     files: ['**/*.html'],
     extends: [...angular.configs.templateRecommended, ...angular.configs.templateAccessibility],
-    rules: {},
-  },
-);
+    rules: {}
+  }
+)
