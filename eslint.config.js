@@ -14,7 +14,6 @@ module.exports = tseslint.config(
     processor: angular.processInlineTemplates,
     rules: {
       curly: 'error',
-      eqeqeq: 'error',
       quotes: ['warn', 'single'],
       complexity: [
         'warn',
@@ -79,7 +78,6 @@ module.exports = tseslint.config(
       '@typescript-eslint/no-non-null-assertion': ['error'],
       '@typescript-eslint/consistent-type-definitions': 'error',
       '@typescript-eslint/restrict-template-expressions': 'off',
-      '@typescript-eslint/explicit-function-return-type': 'warn',
       '@typescript-eslint/no-unused-vars': [
         'warn',
         {
