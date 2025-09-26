@@ -1,0 +1,36 @@
+<div #exportContainer class="activity-card">
+  <div class="activity-header">
+    <h2 [style.color]="textColor">{{ activity.name }}</h2>
+    <p [style.color]="textColor">{{ activity.start_date | stravaDate }}</p>
+  </div>
+
+  <div class="activity-stats">
+    <p [style.color]="textColor">
+      <strong>Distancia:</strong> {{ activity.distance | metersToKm }} km
+    </p>
+    <p [style.color]="textColor"><strong>Ritmo:</strong> {{ activity.average_speed | pace }} /km</p>
+    <p [style.color]="textColor">
+      <strong>Tiempo en movimiento:</strong> {{ activity.moving_time | secondsToMinutes }}
+    </p>
+    <p [style.color]="textColor">
+      <strong>Tiempo transcurrido:</strong> {{ activity.elapsed_time | secondsToMinutes }}
+    </p>
+    <p [style.color]="textColor">
+      <strong>Desnivel:</strong> {{ activity.total_elevation_gain }} m
+    </p>
+    <p [style.color]="textColor"><strong>Tipo:</strong> {{ activity.type }}</p>
+    <p [style.color]="textColor"><strong>Kudos:</strong> {{ activity.kudos_count }}</p>
+  </div>
+
+  <app-activity-route [polylineData]="polylineData" [lineColor]="lineColor"> </app-activity-route>
+</div>
+
+<div class="activity-controls">
+  <label>
+    Estilo:
+    <select [(ngModel)]="selectedPalette" (ngModelChange)="applyPalette()">
+      <option *ngFor="let p of colorPalettes" [ngValue]="p">{{ p.name }}</option>
+    </select>
+  </label>
+  <button (click)="exportAsPng()">Exportar PNG</button>
+</div>

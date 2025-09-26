@@ -10,6 +10,28 @@ export const LANG = 'lang'
 export const ES_LANG = 'es'
 export const EN_LANG = 'en'
 
+/* Numeric variables  */
+export const ZERO = 0
+export const ZERO_POINT_NINE = 0.9
+export const ONE = 1
+export const TWO = 2
+export const THREE = 3
+export const THREE_POINT_SIX = 3.6
+export const FOUR = 4
+export const FIVE = 5
+export const SEVEN = 7
+export const SIXTEEN = 16
+export const SIXTY = 60
+export const THREE_HUNDRED = 300
+export const THOUSAND = 1000
+export const TWO_THOUSAND = 2000
+export const THREE_THOUSAND_SIX_HUNDRED = 3600
+
+/* Color variables  */
+export const WHITE = '#ffffff'
+export const BLACK = '#000000'
+export const ORANGE = '#ff4500'
+
 /* Variables associated with theme styles */
 export const THEME = 'theme'
 export const THEME_DARK = 'dark'

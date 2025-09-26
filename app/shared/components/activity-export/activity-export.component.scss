@@ -1,0 +1,66 @@
+.activity-card {
+  background-color: transparent;
+  border-radius: 12px;
+  padding: 16px;
+  margin: 8px;
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-align: center;
+  .activity-header {
+    margin-bottom: 12px;
+    h2 {
+      margin: 0 0 4px 0;
+      font-size: 1.2rem;
+    }
+    p {
+      margin: 0;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+  }
+
+  .activity-stats {
+    margin-bottom: 12px;
+    p {
+      margin: 2px 0;
+      font-size: 0.85rem;
+    }
+  }
+
+  app-activity-route {
+    margin-bottom: 12px;
+    canvas {
+      width: 100%;
+      height: 300px;
+      border-radius: 8px;
+    }
+  }
+}
+
+.activity-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  label {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+  }
+  button {
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: none;
+    background-color: #ff4500;
+    color: white;
+    cursor: pointer;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .activity-card {
+    width: 100%;
+  }
+}
